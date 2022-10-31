@@ -1,0 +1,61 @@
+body
+{   width: 100%;
+    background-color: rgb(121, 166, 23);
+   
+}
+.headone{
+    color: rgb(39, 4, 58);
+    font-weight: 800;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    align-self: center;
+
+}
+.headone:hover{
+    cursor: pointer;
+    
+}
+.img-tech{
+    width: 30%;
+    height: 30%;
+    object-fit: cover;
+    animation: imgZoom 3.5s ease infinite;
+    animation-direction: reverse;
+    animation-fill-mode: none;
+}
+.img-tech:hover{
+    animation-play-state: paused;
+}
+@keyframes imgZoom {
+    0% { transform:scale(1) rotate (0deg); } 
+    50%{ transform:scale(1.1) rotate (15deg);}
+    100% { transform:scale(1) rotate (15deg); } 
+}
+.btn-read{
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 40px;
+    color: darkgreen;
+    width: 150px; 
+    height: 40px;
+}
+.btn-read:hover{
+    background-color:rgb(24, 193, 38);
+    transition: all 0.9s ease-in-out;
+    transition-delay: 0.3s;
+}
+.btn-apply{
+    position: relative;
+    top: 20px;
+    color: rgb(48, 18, 117);
+    font-size: medium;
+    font-weight: 600;
+    border-radius: 40px;
+    width: 120px; 
+    height: 40px;
+}
+.btn-apply:hover{
+    background-color:rgb(240, 29, 159);
+    transition: all 0.9s ease-in-out;
+    transition-delay: 0.5s;
+}
