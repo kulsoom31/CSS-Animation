@@ -1,23 +1,39 @@
 body
 {   width: 100%;
+    align-content: center;
     background-color: rgb(121, 166, 23);
-   
+   margin: 0px;
 }
-.headone{
+header{
+    text-align: center;
+    padding: 1px;
+    background: linear-gradient(90deg, var(--c1, #f6d365), var(--c2, #fda085) 51%, var(--c1, #f6d365)) var(--x, 0)/ 200%;
+    transition: 0.5s;
+    --c1: #f6d365;
+    --c2: #fda085;
+}
+header:hover { --x: 100%; }
+
+
+.headon{
     color: rgb(39, 4, 58);
     font-weight: 800;
     font-style: italic;
     font-family: 'Times New Roman', Times, serif;
     align-self: center;
-
+    /* animation: spin 4s infinite linear; */
+    animation: spinTitle 3.5s ease infinite;
 }
-.headone:hover{
-    cursor: pointer;
-    
+.container{
+    margin:10px 10%;
+}
+.img-block{
+    margin-top: 25px;
+    text-align: center;
 }
 .img-tech{
-    width: 30%;
-    height: 30%;
+    width: 70%;
+    height: 70%;
     object-fit: cover;
     animation: imgZoom 3.5s ease infinite;
     animation-direction: reverse;
@@ -27,11 +43,11 @@ body
     animation-play-state: paused;
 }
 @keyframes imgZoom {
-    0% { transform:scale(1) rotate (0deg); } 
-    50%{ transform:scale(1.1) rotate (15deg);}
-    100% { transform:scale(1) rotate (15deg); } 
+    0% { transform:scale(1);  } 
+    50%{ transform:scale(1.1); }
+    100% { transform:scale(1);  } 
 }
-.btn-read{
+.btn-read{ cursor: pointer;
     font-size: medium;
     font-weight: 600;
     border-radius: 40px;
@@ -44,7 +60,7 @@ body
     transition: all 0.9s ease-in-out;
     transition-delay: 0.3s;
 }
-.btn-apply{
+.btn-apply{ cursor: pointer;
     position: relative;
     top: 20px;
     color: rgb(48, 18, 117);
@@ -58,4 +74,10 @@ body
     background-color:rgb(240, 29, 159);
     transition: all 0.9s ease-in-out;
     transition-delay: 0.5s;
+}
+
+@keyframes spinTitle {
+    0% { transform: rotate(0deg);  } 
+    50%{ transform: rotate(4deg); }
+    100% { transform: rotate(-4deg);  } 
 }
